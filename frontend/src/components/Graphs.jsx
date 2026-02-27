@@ -1,5 +1,8 @@
 import React, { useMemo } from 'react';
-import Plot from 'react-plotly.js';
+import Plotly from 'plotly.js-basic-dist';
+import createPlotlyComponent from 'react-plotly.js/factory';
+
+const Plot = createPlotlyComponent(Plotly);
 
 export const ResultsGraphs = ({ analysisData, selectedModel }) => {
     // Extract parsed data from backend
